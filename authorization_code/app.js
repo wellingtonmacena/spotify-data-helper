@@ -57,6 +57,10 @@ app.get('/login', function(req, res) {
     }));
 });
 
+app.get("/aqui",function(req, res){
+  res.send("aqui")
+})
+
 app.get('/callback', function(req, res) {
 
   // your application requests refresh and access tokens
@@ -91,7 +95,7 @@ app.get('/callback', function(req, res) {
 
         var access_token = body.access_token,
             refresh_token = body.refresh_token;
-
+        
         var options = {
           url: 'https://api.spotify.com/v1/me',
           headers: { 'Authorization': 'Bearer ' + access_token },
