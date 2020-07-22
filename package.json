@@ -12,6 +12,6 @@
     "request": "~2.83.0"
   },
   "scripts": {
-    "start": "node authorization_code/app.js "
+    "start": "nodemon authorization_code/app.js "
   }
 }

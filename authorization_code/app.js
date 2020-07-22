@@ -57,8 +57,11 @@ app.get('/login', function(req, res) {
     }));
 });
 
-app.get("/aqui",function(req, res){
-  res.send("aqui")
+app.get("/aqui/:acess",function(req, res){
+
+ // window.location.href = `http://localhost:3000/token/:${req.params.acess}`
+    res.redirect(`http://localhost:3000/token/:${req.params.acess}`)
+  //res.send("token: " + req.params.acess )
 })
 
 app.get('/callback', function(req, res) {

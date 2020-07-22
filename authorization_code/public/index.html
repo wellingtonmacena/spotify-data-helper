@@ -6,8 +6,24 @@
 </head>
 
 <body>
+  <button>
+    <a href="/login">Logar </a>
+  </button>
+  <button onclick="goBack()">
+    
+    voltar
+   
+  </button>
 
   <script>
+
+    function goBack(){
+      const token = localStorage.getItem("access_token")
+      console.log(token)
+      window.location.href = `http://localhost:8888/aqui/${token}`
+      console.log("acionour")
+    }
+    
 
     (function () {
       /**
