@@ -72,3 +72,48 @@ body{
 #login a:active{
   box-shadow:2px 2px 4px #000000
   }
+
+
+#voltar {
+    display: grid;
+    justify-content: center;
+    display: none;  
+    }
+  
+#voltar a{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    background-color: #3D9C03;
+    font-size: 20px; 
+    color: white;
+    border: black;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+#voltar:hover{
+  opacity: 0.5;
+    }
+
+#voltar a:active{
+  box-shadow:2px 2px 4px #000000
+    }
+
+#sub-title1{
+    margin-top: 30px;
+    display: none;
+    width: 500px;
+    margin-left: 150px;
+    font-size: larger;
+    text-align: center;
+    }
+
+#arrow1{
+    display: none;
+    justify-content: center;
+    }

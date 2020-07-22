@@ -32,19 +32,19 @@
 
   </div>
 
-  <div id="sub-title">
+  <div id="sub-title1">
     <span>
-      Depois de logar, volte para a página principal
+      Agora volte para nossa página inicial
     </span>
 
   </div>
 
-  <div id="arrow">
+  <div id="arrow1">
     <img id="arrowImg"
       src="https://cdn.icon-icons.com/icons2/1993/PNG/512/arrow_arrows_bottom_direction_down_navigation_up_icon_123235.png"></img>
   </div>
 
-  <div id="login">
+  <div id="voltar">
     <a onclick="goBack()" >Voltar</a>
 
   </div>
@@ -75,6 +75,20 @@
 
       var params = getHashParams();
 
+      const isNone = window.location.toString().split("/")[3]
+
+      if(isNone.length >0){
+        document.getElementById('login').style.display="none"
+        document.getElementById('sub-title').style.display="none"
+        document.getElementById('arrow').style.display="none"
+
+        document.getElementById('voltar').style.display="grid"
+        document.getElementById('sub-title1').style.display="grid"
+        document.getElementById('arrow1').style.display="grid"
+
+
+      }
+      
       var access_token = params.access_token,
         refresh_token = params.refresh_token,
         error = params.error;
