@@ -1,19 +1,32 @@
 <!doctype html>
 <html>
-
+<link rel="stylesheet" href="/index.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 <head>
-  </style>
-</head>
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Favorites</title>
+
+</head>
 <body>
-  <button>
-    <a href="/login">Logar </a>
-  </button>
-  <button onclick="goBack()">
-    
-    voltar
+  <div id="title">
+    <h1>Spotify Favorites</h1>
+  </div>
+
+  <div id="sub-title">
+    <span>
+      Você precisa logar na sua conta do spotify antes de acessar a aplicação
+    </span>
    
-  </button>
+  </div>
+  <div id="arrow">
+    <img id="arrowImg"src="https://cdn.icon-icons.com/icons2/1993/PNG/512/arrow_arrows_bottom_direction_down_navigation_up_icon_123235.png"></img>
+  </div>
+ 
+  <div id="login">
+      <a href="/login">Logar</a>
+  </div>
 
   <script>
 
@@ -21,7 +34,6 @@
       const token = localStorage.getItem("access_token")
       console.log(token)
       window.location.href = `http://localhost:3000/token/${token}`
-      console.log("acionour")
     }
     
 
@@ -30,8 +42,6 @@
        * Obtains parameters from the hash of the URL
        * @return Object
        */
-
-
       function getHashParams() {
         var hashParams = {};
         var e, r = /([^&;=]+)=?([^&;]*)/g,
@@ -41,7 +51,6 @@
         }
         return hashParams;
       }
-
 
       var params = getHashParams();
 
@@ -53,8 +62,6 @@
      console.log(refresh_token)
      localStorage.setItem("access_token", access_token)
      localStorage.setItem("refresh_token", refresh_token)
-
-
     }());
   </script>
 </body>
